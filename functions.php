@@ -186,3 +186,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * navigation walker bootstrap
+ */
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
