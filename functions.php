@@ -101,7 +101,17 @@ function meg_n_boots_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'meg-n-boots' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
+		'description'   => 'Add widgets here to be used in the sidebar.',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Hero', 'meg-n-boots' ),
+		'id'            => 'sidebar-home-hero',
+		'description'   => 'Add a text widget here for the home hero image. Use the Widget Title for H2 font sizes.',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -116,6 +126,12 @@ add_action( 'widgets_init', 'meg_n_boots_widgets_init' );
 function meg_n_boots_scripts() {
 	wp_enqueue_style( 'meg-n-boots-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() .'/css/bootstrap.min.css');
+
+	wp_enqueue_style( 'bootstrap-theme-min', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
+
+	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css');
+
 	wp_enqueue_script( 'meg-n-boots-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'meg-n-boots-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -123,6 +139,26 @@ function meg_n_boots_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	/**
+	 * Added Scripts and styles for the custom theme
+	 */
+
+
+	if( !is_admin()){
+		wp_deregister_script( 'jquery' );
+		wp_register_script('jquery', get_template_directory_uri().'/js/jquery.min.js', false,'1.10.2',true);
+		wp_enqueue_script('jquery');
+	}
+
+	wp_enqueue_script( 'bootstrap-min-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true );
+
+	wp_enqueue_script( 'masonry-js', get_template_directory_uri() . '/js/masonry.js', array(), '4.0.0', true );
+
+	wp_enqueue_script( 'firstheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array(), '1.0', true );
+
+
 }
 add_action( 'wp_enqueue_scripts', 'meg_n_boots_scripts' );
 
