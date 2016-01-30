@@ -26,21 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'meg-n-boots' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
 
 		<!--Original _s menu -->
 
@@ -51,32 +37,61 @@
 
 
 
-		<nav class="navbar navbar-inverse " role="navigation">
+
+
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button"  class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div><!--end navbar-header-->
-				<div class="collapse navbar-collapse menu-primary" id="bs-example-navbar-collapse-1">
+
+				<div class="site-branding text-left col-xs-4">
 					<?php
-					wp_nav_menu( array(
-							'menu'              => '',
-							'theme_location'    => 'primary',
-							'depth'             => 2,
-							'container'         => '',
-							'container_class'   => 'collapse navbar-collapse',
-							'container_id'      => 'bs-example-navbar-collapse-1',
-							'menu_class'        => 'nav navbar-nav',
-							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-							'walker'            => new wp_bootstrap_navwalker())
-					);
-					?>
-					<div class="col-sm-3 col-md-3 pull-right search-navbar">
+					if ( is_front_page() && is_home() ) : ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php else : ?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<?php
+					endif;
+
+					$description = get_bloginfo( 'description', 'display' );
+					if ( $description || is_customize_preview() ) : ?>
+						<p class="site-description sr-only"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+						<?php
+					endif; ?>
+				</div><!-- .site-branding -->
+
+				<div id="navbar-button-group" class="text-right">
+					<button type="button" class="navbar-button"  data-toggle="" data-target="">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+					<button type="button" class="navbar-button"  data-toggle="" data-target="">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="glyphicon glyphicon-menu-hamburger"></span>
+					</button>
+					<button type="button" class="navbar-button"  data-toggle="" data-target="">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="glyphicon glyphicon-option-horizontal"></span>
+					</button>
+				</div>
+
+				<div class="navbar-header">
+
+				</div><!--end navbar-header-->
+				<div class="collapse navbar-collapse menu-primary navbar-right" id="bs-example-navbar-collapse-1">
+<!--					--><?php
+//					wp_nav_menu( array(
+//							'menu'              => '',
+//							'theme_location'    => 'primary',
+//							'depth'             => 2,
+//							'container'         => '',
+//							'container_class'   => 'collapse navbar-collapse',
+//							'container_id'      => 'bs-example-navbar-collapse-1',
+//							'menu_class'        => 'nav navbar-nav',
+//							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+//							'walker'            => new wp_bootstrap_navwalker())
+//					);
+//					?>
+					<div class="col-sm-3 col-md-3 hidden search-navbar"> <!-- Hidden Search Bar -->
 						<form class="navbar-form" role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>" >
 							<div class="input-group">
 								<input type="text" id="searchbox" class="form-control" placeholder="Search" name="s" id="s">
@@ -85,7 +100,7 @@
 								</div>
 							</div>
 						</form>
-					</div>
+					</div> <!-- end hidden Search Bar -->
 				</div><!--end navbar-colapse-->
 			</div><!--end container-->
 		</nav>
