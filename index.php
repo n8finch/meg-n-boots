@@ -29,8 +29,14 @@ get_header(); ?>
 <!--Headers for every page except home page-->
 <div class="container">
 	<div id="page" class="site">
-		<div id="content" class="site-content">
+<!--		<div id="content" class="site-content">-->
 
+
+<!--	Masonry Headers-->
+	<div class="container-fluid">
+	<!-- add extra container element for Masonry -->
+	<div class="grid">
+	<div class="grid-sizer col-xs-6 col-sm-6 col-md-4"></div>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -39,9 +45,9 @@ get_header(); ?>
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+<!--				<header>-->
+<!--					<h1 class="page-title screen-reader-text">--><?php //single_post_title(); ?><!--</h1>-->
+<!--				</header>-->
 
 			<?php
 			endif;
@@ -58,7 +64,7 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+
 
 		else :
 
@@ -68,6 +74,15 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+
+		<!-- add extra container element for Masonry -->
+		</div> <!-- Grid Sizer -->
+		</div> <!-- Grid -->
+		<div id="main-page-footer-nav" class="container">
+			<?php the_posts_navigation(); ?>
+		</div>
+		</div> <!-- Container Fluid-->
 
 
 <?php
