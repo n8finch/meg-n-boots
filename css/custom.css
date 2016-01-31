@@ -86,7 +86,7 @@ h1.site-title > a{
  * Hero Section
  -------------------------------------------*/
 #hero-section {
-    background: url('../img/hero-bg.jpg') 50% 0 repeat fixed;
+    background: url('../img/boots-mtn.jpg') 50% 0 repeat fixed;
     min-height: 500px;
     position: relative;
     display: table;
@@ -107,7 +107,18 @@ h1.site-title > a{
 #hero-section .hero-text {
     margin-top: 30px;
 }
+.hero-section-title,
+.hero-section-p {
+    text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+}
 
+.hero-section-title {
+    font-size: 38px;
+}
+
+.hero-section-p {
+    font-size: 28px;
+}
 
 /*
  * Masonry Mainpage

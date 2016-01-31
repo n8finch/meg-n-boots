@@ -19,8 +19,8 @@ get_header(); ?>
 	<section id="hero-section" data-type="background" data-speed="5">
 		<article>
 			<div class="container clearfix text-center">
-				<h1>These boots were made for walking...</h1>
-				<p class="lead">Add a backgroun image and parallax to this...</p>
+				<h2 class="hero-section-title">These boots were made for walking...</h2>
+				<p class="lead hero-section-p">Add a backgroun image and parallax to this...</p>
 			</div>
 		</article>
 	</section>

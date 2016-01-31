@@ -44,7 +44,19 @@
 				<!-- Brand and toggle get grouped for better mobile display -->
 
 				<div class="site-branding text-left col-xs-4">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php if ( get_theme_mod( 'meg_n_boots_logo' ) ) : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php echo get_theme_mod( 'meg_n_boots_logo' ); ?>" alt="<?php echo get_bloginfo('name'); ?>">
+						</a>
+					<?php else : ?>
+						<h1 class="site-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<?php bloginfo( 'name' ); ?>
+						</a>
+						</h1>
+					<?php endif; ?>
+
+				<!-- <h1 class="site-title"><a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" rel="home">--><?php //bloginfo( 'name' ); ?><!--</a></h1>-->
 
 					<?php
 					$description = get_bloginfo( 'description', 'display' );
