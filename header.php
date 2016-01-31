@@ -71,11 +71,11 @@
 						<span class="sr-only">Toggle navigation</span>
 						<span id="" class="glyphicon glyphicon-search"></span>
 					</button>
-					<button type="button" class="navbar-button"  data-toggle="" data-target="">
+					<button type="button" class="navbar-button"  data-toggle="modal" data-target="#modal-menu">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="glyphicon glyphicon-menu-hamburger"></span>
 					</button>
-					<button type="button" class="navbar-button"  data-toggle="" data-target="">
+					<button type="button" class="navbar-button"  data-toggle="modal" data-target="#modal-sidebar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="glyphicon glyphicon-option-horizontal"></span>
 					</button>

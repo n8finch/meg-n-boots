@@ -83,6 +83,12 @@ h1.site-title > a{
 }
 
 
+ul > li > a {
+    color: white;
+    font-size: 24px;
+}
+
+
 /*
  * Hero Section
  -------------------------------------------*/
