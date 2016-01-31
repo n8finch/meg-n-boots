@@ -10,6 +10,13 @@
 get_header(); ?>
 
 
+	<!--Headers for every page except home page-->
+	<div class="container">
+	<div id="page" class="site">
+	<div id="content" class="site-content">
+
+
+
 	<div class="row">
 	<div class="col-md-8 col-xs-12">
 

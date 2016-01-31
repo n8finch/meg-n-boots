@@ -14,8 +14,25 @@
 
 get_header(); ?>
 
+
+
+	<section id="hero-section" data-type="background" data-speed="5">
+		<article>
+			<div class="container clearfix text-center">
+				<h1>These boots were made for walking...</h1>
+				<p class="lead">Add a backgroun image and parallax to this...</p>
+			</div>
+		</article>
+	</section>
+
+
+<!--Headers for every page except home page-->
+<div class="container">
+	<div id="page" class="site">
+		<div id="content" class="site-content">
+
 <div class="row"> <!-- row ends in sidebar.php -->
-<div class="col-md-8 col-xs-12">
+<div class="col-xs-12">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

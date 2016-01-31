@@ -44,14 +44,9 @@
 				<!-- Brand and toggle get grouped for better mobile display -->
 
 				<div class="site-branding text-left col-xs-4">
-					<?php
-					if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-					endif;
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
+					<?php
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
 						<p class="site-description sr-only"><?php echo $description; /* WPCS: xss ok. */ ?></p>
@@ -74,23 +69,6 @@
 					</button>
 				</div>
 
-				<div class="navbar-header">
-
-				</div><!--end navbar-header-->
-				<div class="collapse navbar-collapse menu-primary navbar-right" id="bs-example-navbar-collapse-1">
-<!--					--><?php
-//					wp_nav_menu( array(
-//							'menu'              => '',
-//							'theme_location'    => 'primary',
-//							'depth'             => 2,
-//							'container'         => '',
-//							'container_class'   => 'collapse navbar-collapse',
-//							'container_id'      => 'bs-example-navbar-collapse-1',
-//							'menu_class'        => 'nav navbar-nav',
-//							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-//							'walker'            => new wp_bootstrap_navwalker())
-//					);
-//					?>
 					<div class="col-sm-3 col-md-3 hidden search-navbar"> <!-- Hidden Search Bar -->
 						<form class="navbar-form" role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>" >
 							<div class="input-group">
@@ -101,7 +79,7 @@
 							</div>
 						</form>
 					</div> <!-- end hidden Search Bar -->
-				</div><!--end navbar-colapse-->
+
 			</div><!--end container-->
 		</nav>
 
@@ -109,4 +87,9 @@
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	</div> <!-- id="page" class="site" -->
+	</div> <!-- class="container" -->
+
+	<!-- Original Div id and class: 	<div id="content" class="site-content">-->
+	<div id="" class="">
+
