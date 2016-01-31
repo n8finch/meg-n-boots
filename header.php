@@ -67,9 +67,9 @@
 				</div><!-- .site-branding -->
 
 				<div id="navbar-button-group" class="text-right">
-					<button type="button" class="navbar-button"  data-toggle="" data-target="">
+					<button type="button" class="navbar-button"  data-toggle="modal" data-target="#modal-search">
 						<span class="sr-only">Toggle navigation</span>
-						<span class="glyphicon glyphicon-search"></span>
+						<span id="" class="glyphicon glyphicon-search"></span>
 					</button>
 					<button type="button" class="navbar-button"  data-toggle="" data-target="">
 						<span class="sr-only">Toggle navigation</span>
@@ -80,18 +80,6 @@
 						<span class="glyphicon glyphicon-option-horizontal"></span>
 					</button>
 				</div>
-
-					<div class="col-sm-3 col-md-3 hidden search-navbar"> <!-- Hidden Search Bar -->
-						<form class="navbar-form" role="search" method="get" id="searchform" action="<?php bloginfo('home'); ?>" >
-							<div class="input-group">
-								<input type="text" id="searchbox" class="form-control" placeholder="Search" name="s" id="s">
-								<div class="input-group-btn">
-									<button class="btn btn-default"  id="searchsubmit"  type="submit"><i class="glyphicon glyphicon-search"></i></button>
-								</div>
-							</div>
-						</form>
-					</div> <!-- end hidden Search Bar -->
-
 			</div><!--end container-->
 		</nav>
 

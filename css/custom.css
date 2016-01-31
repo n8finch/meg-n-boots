@@ -286,3 +286,26 @@ header {
     border-radius: 10px;
 
 }
+
+
+div.input-group {
+    width: 575px;
+}
+
+input#searchbox.form-control {
+    height: 50px;
+    font-size: 24px;
+}
+
+button#searchsubmit.btn.btn-default {
+    height: 50px;
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 780px) {
+    div.input-group {
+        width: 100%;
+    }
+}
+
