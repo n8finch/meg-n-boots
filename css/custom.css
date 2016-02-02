@@ -29,7 +29,9 @@ button:hover {
  * Layout
  -------------------------------------------*/
 
-
+.content-area {
+    padding: 0 30px;
+}
 
 
 /*
@@ -111,7 +113,7 @@ ul > li > a {
 
 
 /*
- * Hero Section
+ * Hero Section Home Page
  -------------------------------------------*/
 #hero-section {
     background: url('../img/boots-mtn.jpg') 50% 0 repeat fixed;
@@ -145,6 +147,10 @@ ul > li > a {
     font-weight: bold;
 }
 
+#hero-page-toppers {
+    min-height: 250px;
+}
+
 .hero-section-p {
     font-size: 28px;
 }
@@ -175,7 +181,6 @@ ul > li > a {
     background: white;
     border: 1px solid #aaa;
     border-radius: 5px;
-    padding: 5px;
 }
 
 #main-page-footer-nav {
@@ -248,7 +253,7 @@ footer {
  -------------------------------------------*/
 
 #posts-hero-section {
-    background: url('../img/hero-bg.jpg') 50% 0 repeat fixed;
+    background: url('../img/hipster-stuff.jpg') 50% 0 repeat fixed;
     min-height: 300px;
     position: relative;
     display: table;

@@ -12,25 +12,24 @@
  * @package Meg-n-Boots
  */
 
-get_header(); ?>
+get_header();
+
+?>
 
 
+		<section id="hero-section" data-type="background" data-speed="5">
+			<article>
+				<div class="container clearfix text-center">
+					<h2 class="hero-section-title">These boots were made for walking...</h2>
+					<p class="lead hero-section-p">Add a backgroun image and parallax to this...</p>
+				</div>
+			</article>
+		</section>
 
-	<section id="hero-section" data-type="background" data-speed="5">
-		<article>
-			<div class="container clearfix text-center">
-				<h2 class="hero-section-title">These boots were made for walking...</h2>
-				<p class="lead hero-section-p">Add a backgroun image and parallax to this...</p>
-			</div>
-		</article>
-	</section>
-
-
-<!--Headers for every page except home page-->
-<div class="container">
+	<!--Headers for every page except home page-->
+	<div class="container">
 	<div id="page" class="site">
-<!--		<div id="content" class="site-content">-->
-
+		<!--		<div id="content" class="site-content">-->
 
 <!--	Masonry Headers-->
 	<div class="container-fluid">
