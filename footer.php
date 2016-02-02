@@ -51,6 +51,7 @@
 </div><!-- modal -->
 
 <!-- Menu Modal
+Uses walker: from https://github.com/twittem/wp-bootstrap-navwalker
 =======================================-->
 
 <div class="modal fade" id="modal-menu">

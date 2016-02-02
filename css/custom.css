@@ -75,6 +75,27 @@ h1.site-title > a{
     background-color: white;
 }
 
+.nav>li>a:focus, .nav>li>a:hover {
+    border-radius: 4px;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    border-radius: 4px;
+}
+
+.nav>li>a:visited {
+    color: #ffffff;
+}
+
+.nav>li>a:hover {
+    color: #337ab7;
+}
+
+.dropdown-menu>li>a {
+    color: #337ab7;
+}
+
+
 #navbar-button-group {
     margin: 25px 0px 0px;
 }
