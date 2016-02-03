@@ -16,10 +16,6 @@ get_header();
 get_template_part( 'template-parts/content-heros' );
 ?>
 
-	<!--Headers for every page except home page-->
-	<div class="container">
-	<div id="page" class="site">
-	<div id="content" class="site-content">
 
 
 	<div class="row">

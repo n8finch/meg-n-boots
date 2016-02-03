@@ -24,6 +24,25 @@ button:hover {
     background-color: #E9E9E9;
 }
 
+input[type="submit"] {
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 1;
+    padding: .6em 1em .4em;
+    background-color: #D43F3A;
+    color: #E9E9E9;
+
+}
+
+input[type="submit"]:hover {
+    box-shadow: none;
+    color: #D43F3A;
+    background-color: #ffffff;
+}
+
 p {
     font-size: 16px;
 }

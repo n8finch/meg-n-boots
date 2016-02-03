@@ -13,13 +13,19 @@
 	<section id="posts-hero-section"  class="hero-page-toppers" data-type="background" data-speed="5">
 		<article>
 			<div class="container clearfix text-center">
-				<h2 class="hero-section-title"> <?php echo the_title(); ?></h2>
+				<h2 class="hero-section-title">
+					<?php
+					if ( is_404() ) {
+						echo 'Aw shucks!';
+					} else {
+						echo the_title();
+					}
+					?>
+				</h2>
 			</div>
 		</article>
 	</section>
 
 
 <!--Headers for every page except home page-->
-<div class="container">
-	<div id="page" class="site">
-<!--		<div id="content" class="site-content">-->
+	<div id="content" class="site-content">
