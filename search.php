@@ -7,10 +7,12 @@
  * @package Meg-n-Boots
  */
 
-get_header(); ?>
+get_header();
+get_template_part( 'template-parts/content-heros' );
+?>
 
 	<div class="row">
-	<div class="col-md-8 col-xs-12">
+
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -19,7 +21,10 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'meg-n-boots' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h2 class="page-title"><?php printf( esc_html__( 'It seems like you were looking for: %s', 'meg-n-boots' ), '<span class="search-page-query">' . get_search_query() . '</span>' ); ?></h2>
+				<p>
+					Here are a few results we were able to locate for you...
+				</p>
 			</header><!-- .page-header -->
 
 			<?php

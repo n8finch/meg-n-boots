@@ -34,7 +34,6 @@ input[type="submit"] {
     padding: .6em 1em .4em;
     background-color: #D43F3A;
     color: #E9E9E9;
-
 }
 
 input[type="submit"]:hover {
@@ -215,6 +214,10 @@ h1.site-title > a{
     padding: 10px 20px;
 }
 
+.entry-title {
+    padding: 0 10px;
+}
+
 .entry-title > a {
     text-decoration: none;
 }
@@ -231,7 +234,7 @@ h1.site-title > a{
 }
 
 .main-page-the-content {
-    margin: 10px;
+    margin: 15px;
 }
 
 .main-page-the-content > p {
@@ -366,6 +369,19 @@ button#searchsubmit.btn.btn-default {
     div.input-group {
         width: 100%;
     }
+}
+
+/*Search Results Page*/
+
+.search-page-query {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.page-header {
+     padding-bottom: none;
+     margin: none;
+     border-bottom: none;
 }
 
 

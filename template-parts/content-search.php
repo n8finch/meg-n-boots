@@ -8,6 +8,12 @@
  */
 
 ?>
+<!--Headers for every page except home page-->
+
+</div><!-- #content -->
+</div><!-- #page -->
+</div><!-- .container -->
+<div id="content" class="site-content">
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -28,3 +34,4 @@
 		<?php meg_n_boots_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
+
