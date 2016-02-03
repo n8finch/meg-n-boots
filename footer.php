@@ -20,7 +20,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'meg-n-boots' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'meg-n-boots' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'meg-n-boots' ), 'meg-n-boots', '<a href="http://www.n8finch.com" rel="designer">Nate Finch</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'meg-n-boots' ), 'Meg-n-Boots', '<a href="http://www.n8finch.com" rel="designer">Nate Finch</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	</div><!-- #container -->
