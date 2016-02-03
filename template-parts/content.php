@@ -20,8 +20,19 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<p><?php meg_n_boots_posted_on(); ?></p>
-			<p><?php meg_n_boots_entry_footer(); ?></p>
+			<div class="post-details">
+				<p>
+				Posted by: <span class="author-image"><?php echo get_avatar( get_the_author_meta( 'ID' ) );?></span><span> <?php the_author_meta( 'display_name' ); ?></span>
+				</p>
+				<p>
+				<span class="glyphicon glyphicon-time"></span> <time><?php the_date(); ?></time>
+				</p>
+				<p>
+				<span class="glyphicon glyphicon-folder-open"></span> Categories: <?php the_category(', ') ?>
+				<span class="glyphicon glyphicon-tag"></span> <?php the_tags(); ?>
+				</p>
+				<?php edit_post_link( 'Edit', '<i class="fa fa-pencil"></i> ', ''  ); ?>
+			</div><!-- post-details -->
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -42,7 +53,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php meg_n_boots_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

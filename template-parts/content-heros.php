@@ -14,8 +14,6 @@
 		<article>
 			<div class="container clearfix text-center">
 				<h2 class="hero-section-title"> <?php echo the_title(); ?></h2>
-				<?php  ?>
-
 			</div>
 		</article>
 	</section>

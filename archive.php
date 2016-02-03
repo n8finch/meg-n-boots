@@ -55,7 +55,7 @@ get_template_part( 'template-parts/content-heros' );
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
+
 
 <?php
 get_sidebar();

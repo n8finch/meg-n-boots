@@ -31,6 +31,9 @@ get_template_part( 'template-parts/content-heros' );
 			get_template_part( 'template-parts/content', get_post_format() );
 
 
+			?>
+			<hr/>
+			<?php
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
