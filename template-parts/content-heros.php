@@ -17,6 +17,8 @@
 					<?php
 					if ( is_404() ) {
 						echo 'Aw shucks!';
+					} else if ( is_search() ) {
+						echo 'Just what you needed?';
 					} else {
 						echo the_title();
 					}

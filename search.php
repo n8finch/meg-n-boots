@@ -53,5 +53,4 @@ get_template_part( 'template-parts/content-heros' );
 	</div><!--col-md-8 col-xs-12 -->
 
 <?php
-get_sidebar();
 get_footer();
