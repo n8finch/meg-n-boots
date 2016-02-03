@@ -474,17 +474,20 @@ button#searchsubmit.btn.btn-default {
 
 /*Primary Sidebar Widgets*/
 
-#sidebar-float-right {
-    float-right;
-}
-
 #primary-sidebar-widget {
     background: none;
     max-width: 350px;
 }
 
+.sidebar-container {
+    min-width: 350px;
+}
 
-/* === WIDGETS === */
+.widget-area {
+    padding: 20px;
+}
+
+/*/!* === WIDGETS === *!/*/
 
 .widget {
     padding: 20px;
@@ -520,8 +523,6 @@ button#searchsubmit.btn.btn-default {
     opacity: .8;
 }
 
-
-/* sidr links style */
 
 .hide {
     display: none;

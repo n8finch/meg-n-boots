@@ -75,7 +75,7 @@
 						<span class="sr-only">Toggle navigation</span>
 						<span class="glyphicon glyphicon-menu-hamburger"></span>
 					</button>
-					<button type="button" class="navbar-button"  data-toggle="modal" data-target="#modal-sidebar">
+					<button type="button" id="" class="navbar-button"  data-toggle="modal" data-target="#modal-sidebar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="glyphicon glyphicon-option-horizontal"></span>
 					</button>

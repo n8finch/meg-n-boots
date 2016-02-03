@@ -102,10 +102,10 @@ function meg_n_boots_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'meg-n-boots' ),
 		'id'            => 'sidebar-1',
 		'description'   => 'Add widgets here to be used in the sidebar.',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	register_sidebar( array(
@@ -194,3 +194,20 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 
 
+function sidr_footer() {
+
+// output the static html for the side menus
+
+
+	if ( is_active_sidebar( 'sidebar-1' ) ) :
+					echo ' <div id="sidr-right" class="sidebar-container" role="complementary">
+ 						<div id="close-sidebar"><span class="glyphicon-option-vertical"></span></div>
+						<div class="widget-area">';
+							dynamic_sidebar( 'sidebar-1' );
+							echo ' </div><!-- .widget-area -->
+					</div><!-- #sidr-right -->';
+					endif;
+
+}
+
+add_action( 'wp_footer' , 'sidr_footer' );
