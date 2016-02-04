@@ -16,6 +16,7 @@ body {
 button {
     box-shadow: none;
     border: none;
+    text-shadow: none;
 }
 
 button:hover {
@@ -475,6 +476,8 @@ button#searchsubmit.btn.btn-default {
 /*Primary Sidebar Widgets*/
 
 #primary-sidebar-widget {
+    position: relative;
+    z-index: 2;
     background-color: #000;
     opacity: .7;
     max-width: 350px;

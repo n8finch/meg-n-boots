@@ -8,9 +8,6 @@
  */
 
 ?>
-<div id="primary-sidebar-widget" class="hide">
-	<?php get_sidebar(); ?>
-</div>
 
 <!-- Hero for Other Pages that aren't home -->
 	<section id="posts-hero-section"  class="hero-page-toppers" data-type="background" data-speed="5">
