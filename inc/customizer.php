@@ -163,6 +163,9 @@ add_action( 'customize_register', 'meg_n_boots_customize_register' );
  */
 
 function meg_n_boots_customizer_head_styles() {
+
+
+
 	$site_primary_color = get_theme_mod( 'site_primary_color' );
 	$title_text_color = get_theme_mod( 'title_text_color' );
 	$body_color = get_theme_mod( 'body_color' );
