@@ -475,8 +475,13 @@ button#searchsubmit.btn.btn-default {
 /*Primary Sidebar Widgets*/
 
 #primary-sidebar-widget {
-    background: none;
+    background-color: #000;
+    opacity: .7;
     max-width: 350px;
+    height:auto;
+    float:right;
+    margin-top: 79px;
+    border-radius: 3px 0 0 3px;
 }
 
 .sidebar-container {
@@ -484,15 +489,16 @@ button#searchsubmit.btn.btn-default {
 }
 
 .widget-area {
-    padding: 20px;
+
 }
 
 /*/!* === WIDGETS === *!/*/
 
 .widget {
     padding: 20px;
-    background-color: #E9E9E9;
+
     border-radius: 3px;
+    color: #fff;
 }
 
 .widget h4 {
@@ -523,6 +529,8 @@ button#searchsubmit.btn.btn-default {
     opacity: .8;
 }
 
+
+/*Sidebar*/
 
 .hide {
     display: none;

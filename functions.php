@@ -194,20 +194,3 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 
 
-function sidr_footer() {
-
-// output the static html for the side menus
-
-
-	if ( is_active_sidebar( 'sidebar-1' ) ) :
-					echo ' <div id="sidr-right" class="sidebar-container" role="complementary">
- 						<div id="close-sidebar"><span class="glyphicon-option-vertical"></span></div>
-						<div class="widget-area">';
-							dynamic_sidebar( 'sidebar-1' );
-							echo ' </div><!-- .widget-area -->
-					</div><!-- #sidr-right -->';
-					endif;
-
-}
-
-add_action( 'wp_footer' , 'sidr_footer' );

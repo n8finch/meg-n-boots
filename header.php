@@ -75,24 +75,22 @@
 						<span class="sr-only">Toggle navigation</span>
 						<span class="glyphicon glyphicon-menu-hamburger"></span>
 					</button>
-					<button type="button" id="" class="navbar-button"  data-toggle="modal" data-target="#modal-sidebar">
+					<button type="button" id="sidebar-slider" class="navbar-button">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="glyphicon glyphicon-option-horizontal"></span>
 					</button>
 				</div>
 			</div><!--end container-->
 		</nav>
-
-
-
-
-
-
 	</header><!-- #masthead -->
 
 	</div> <!-- id="page" class="site" -->
+
 	</div> <!-- class="container" -->
 
+	<div id="primary-sidebar-widget" class="hide">
+		<?php get_sidebar(); ?>
+	</div>
 	<!-- Original Div id and class: 	<div id="content" class="site-content">-->
 	<div id="" class="">
 
