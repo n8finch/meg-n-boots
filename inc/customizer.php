@@ -29,7 +29,7 @@ function meg_n_boots_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'meg_n_boots_hero_title', array(
-		'default' => 'A nice, bold tile!'
+		'default' => 'A nice, bold title!'
 	) );
 
 	$wp_customize->add_control( 'meg_n_boots_hero_title', array(
@@ -52,10 +52,12 @@ function meg_n_boots_customize_register( $wp_customize ) {
 		'priority'  => 2
 	) );
 
-	$wp_customize->add_setting( 'meg_n_boots_hero_image', array( 'default' => null ) );
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'meg_n_boots_logo', array(
+	$wp_customize->add_setting( 'meg_n_boots_hero_image', array(
+		'default' => '../img/boots-mtn.jpg'
+	) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'meg_n_boots_hero_image', array(
 		'label'		=> __( 'Hero Image', 'meg_n_boots' ),
-		'description' => __('his is the hero image you want displayed, should be at the dimensions 190 x 60 pixels, or proportionally larger. best results are with images 2000px or wider.'),
+		'description' => __('This is the hero image you want displayed, should be at the dimensions 2000 x 745 pixels, or proportionally larger. best results are with images 2000px or wider.'),
 		'section'	=> 'meg_n_boots_hero_title',
 		'settings'	=> 'meg_n_boots_hero_image',
 		'priority'	=> 20
@@ -153,7 +155,11 @@ add_action( 'customize_register', 'meg_n_boots_customize_register' );
 
 function meg_n_boots_customizer_head_styles() {
 
+	global $meg_n_boots_hero_title, $meg_n_boots_hero_subtitle, $meg_n_boots_hero_image;
+	$meg_n_boots_hero_title = get_theme_mod( 'meg_n_boots_hero_title' );
+	$meg_n_boots_hero_subtitle = get_theme_mod( 'meg_n_boots_hero_subtitle' );
 
+	$meg_n_boots_hero_image = get_theme_mod( 'meg_n_boots_hero_image');
 
 	$site_primary_color = get_theme_mod( 'site_primary_color' );
 	$title_text_color = get_theme_mod( 'title_text_color' );
@@ -164,6 +170,10 @@ function meg_n_boots_customizer_head_styles() {
 
 	?>
 		<style type="text/css">
+
+			#hero-section {
+				background: url('<?php echo $meg_n_boots_hero_image ?>') 50% 0 repeat fixed;
+			}
 
 			/*Site Primary Color*/
 			button:hover,
