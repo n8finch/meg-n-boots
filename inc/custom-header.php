@@ -22,11 +22,12 @@
  */
 function meg_n_boots_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'meg_n_boots_custom_header_args', array(
-		'default-image'          => '',
+		'default-image'          => ' ',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 190,
+		'height'                 => 60,
 		'flex-height'            => true,
+		'uploads'                => true,
 		'wp-head-callback'       => 'meg_n_boots_header_style',
 	) ) );
 }

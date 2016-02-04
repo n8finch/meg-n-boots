@@ -21,17 +21,6 @@ function meg_n_boots_customize_register( $wp_customize ) {
 
 	//Customize Title Section
 	$wp_customize->get_section( 'title_tagline' )->title = __( 'Site Title, Tagline, & Icon', 'meg_n_boots' );
-//	$wp_customize->remove_section( 'header_image' );
-
-	// Logo Uploader
-	$wp_customize->add_setting( 'meg_n_boots_logo', array( 'default' => null ) );
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'meg_n_boots_logo', array(
-		'label'		=> __( 'Custom Site Logo (replaces title)', 'meg_n_boots' ),
-		'description' => __('The Logo should be at the dimensions 190 x 60 pixels, or proportional.'),
-		'section'	=> 'title_tagline',
-		'settings'	=> 'meg_n_boots_logo',
-		'priority'	=> 20
-	) ) );
 
 	//Hero Image and Title Section
 	$wp_customize->add_section( 'meg_n_boots_hero_title' , array(
@@ -40,7 +29,7 @@ function meg_n_boots_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'meg_n_boots_hero_title', array(
-		'default' => 1
+		'default' => 'A nice, bold tile!'
 	) );
 
 	$wp_customize->add_control( 'meg_n_boots_hero_title', array(
@@ -52,7 +41,7 @@ function meg_n_boots_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'meg_n_boots_hero_subtitle', array(
-		'default' => 2
+		'default' => 'And a smalled, supporting subtitle to go with it.'
 	) );
 
 	$wp_customize->add_control( 'meg_n_boots_hero_subtitle', array(

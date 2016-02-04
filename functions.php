@@ -76,6 +76,10 @@ function meg_n_boots_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+
+	// Set up the WordPress core custom header feature.
+	add_theme_support( 'custom-header' );
 }
 endif;
 add_action( 'after_setup_theme', 'meg_n_boots_setup' );

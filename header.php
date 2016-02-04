@@ -27,7 +27,6 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-
 		<!--Original _s menu -->
 
 <!--		<nav id="site-navigation" class="main-navigation" role="navigation">-->
@@ -35,18 +34,14 @@
 <!--			--><?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 <!--		</nav><!-- #site-navigation -->
 
-
-
-
-
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 
 				<div class="site-branding text-left col-xs-4">
-					<?php if ( get_theme_mod( 'meg_n_boots_logo' ) ) : ?>
+					<?php if ( isset (get_theme_mod( 'header_image_data' )->url )) : ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php echo get_theme_mod( 'meg_n_boots_logo' ); ?>" alt="<?php echo get_bloginfo('name'); ?>">
+							<img id="header-logo" src="<?php echo get_theme_mod( 'header_image_data' )->url ?>" alt="<?php echo get_bloginfo('name'); ?>">
 						</a>
 					<?php else : ?>
 						<h1 class="site-title">
@@ -88,9 +83,10 @@
 
 	</div> <!-- class="container" -->
 
-	<div id="primary-sidebar-widget" class="hide">
-		<?php get_sidebar(); ?>
-	</div>
+		<div id="primary-sidebar-widget" class="hide">
+			<?php get_sidebar(); ?>
+		</div>
+
 	<!-- Original Div id and class: 	<div id="content" class="site-content">-->
 	<div id="" class="">
 
