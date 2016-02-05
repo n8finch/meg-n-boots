@@ -51,6 +51,15 @@ ul {
     font-size: 16px;
 }
 
+a {
+    color: #337ab7;
+}
+
+a:visited {
+    color: #337ab7;
+}
+
+
 
 
 /*
@@ -482,32 +491,37 @@ button#searchsubmit.btn.btn-default {
 /*Primary Sidebar Widgets*/
 
 #primary-sidebar-widget {
-    position: relative;
+    position: absolute;
     z-index: 2;
     background-color: #000;
-    opacity: .7;
     max-width: 350px;
     height:auto;
     float:right;
     margin-top: 79px;
     border-radius: 3px 0 0 3px;
+    right: 0;
 }
 
 .sidebar-container {
     min-width: 350px;
 }
 
-.widget-area {
+#primary-sidebar-widget a {
+    color: #34B1F3;
+    opacity: 1;
+}
 
+aside {
+    margin: 20px;
 }
 
 /*/!* === WIDGETS === *!/*/
 
 .widget {
     padding: 20px;
-
-    border-radius: 3px;
+    margin: 0;
     color: #fff;
+    border-bottom: 1px solid #555555;
 }
 
 .widget h4 {

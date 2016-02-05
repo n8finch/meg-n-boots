@@ -39,23 +39,13 @@ $(function() {
 
 
 jQuery(document).ready(function($) {
-    //put IDs for sidebar and toggle in vars
-    var toggle = "#sidebar-slider";
-    var slideout = "#primary-sidebar-widget";
 
-    $( toggle ).click( function () {
-        console.log('Clicked!');
-        if ( $( slideout ).hasClass( 'hide' )) {
-            $( slideout ).removeClass( 'hide').animate({
-                width: 'toggle',
-            }, 500 );
-        } else {
-            $( slideout ).animate({
-                width: 'toggle',
-            }, 500, function() {
-                $( slideout ).addClass( 'hide');
-            });
-
-        }
-    }); //end slideout function
+    $("#sidebar-slider").on( 'click', function() {
+      console.log("clicked1");
+      if ( $("#primary-sidebar-widget").hasClass('hide') === true ) {
+          $("#primary-sidebar-widget").removeClass('hide');
+      } else {
+          $("#primary-sidebar-widget").addClass('hide');
+      }
+    });
 }); //end noConflict
