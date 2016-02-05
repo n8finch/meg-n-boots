@@ -11,6 +11,16 @@
   });
 
 
+  //Change out featured images
+
+  var heroImage = document.getElementById('posts-hero-section');
+
+  if ( heroImage.hasAttribute('data-image') ) {
+    var heroURL = heroImage.getAttribute('data-image');
+    $("#posts-hero-section").backstretch(heroURL);
+  }
+
+
   //Hero Image Parallax
   $(function() {
 
@@ -55,14 +65,6 @@
   });
 
 
-  //Change out featured images
-
-  var heroImage = document.getElementById('posts-hero-section');
-
-  if ( heroImage.hasAttribute('data-image') ) {
-    var heroURL = heroImage.getAttribute('data-image');
-    $("#posts-hero-section").backstretch(heroURL);
-  }
 
 
 }(jQuery)); //end No Conflict
