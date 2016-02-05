@@ -7,7 +7,14 @@
  * @package Meg-n-Boots
  */
 
+//Get the Featured Image
+if ( has_post_thumbnail() ) {
+	the_post_thumbnail();
+}
 ?>
+
+
+
 
 <!-- Hero for Other Pages that aren't home -->
 	<section id="posts-hero-section"  class="hero-page-toppers" data-type="background" data-speed="5">

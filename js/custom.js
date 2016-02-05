@@ -1,5 +1,7 @@
 // external js: masonry.pkgd.js
 
+(function($) {
+
 $('.grid').masonry({
     itemSelector: '.grid-item',
     columnWidth: '.grid-sizer',
@@ -38,14 +40,16 @@ $(function() {
 });
 
 
-jQuery(document).ready(function($) {
+  $(document).ready(function ($) {
 
-    $("#sidebar-slider").on( 'click', function() {
+    $("#sidebar-slider").on('click', function () {
       console.log("clicked1");
-      if ( $("#primary-sidebar-widget").hasClass('hide') === true ) {
-          $("#primary-sidebar-widget").removeClass('hide');
+      if ($("#primary-sidebar-widget").hasClass('hide') === true) {
+        $("#primary-sidebar-widget").removeClass('hide');
       } else {
-          $("#primary-sidebar-widget").addClass('hide');
+        $("#primary-sidebar-widget").addClass('hide');
       }
     });
-}); //end noConflict
+  });
+
+}(jQuery));
