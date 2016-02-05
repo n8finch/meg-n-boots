@@ -1,45 +1,47 @@
 // external js: masonry.pkgd.js
-
+//No Conflict
 (function($) {
 
-$('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-});
+  //Add Masonry to index.php
+
+  $('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+  });
 
 
+  //Hero Image Parallax
+  $(function() {
 
-//Hero Image Parallax
-$(function() {
+      // Cache the Window object
+      var $window = $(window);
 
-    // Cache the Window object
-    var $window = $(window);
+      // Parallax Backgrounds
+      // Tutorial: http://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641
 
-    // Parallax Backgrounds
-    // Tutorial: http://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641
+      $('section[data-type="background"]').each(function(){
+          var $bgobj = $(this); // assigning the object
 
-    $('section[data-type="background"]').each(function(){
-        var $bgobj = $(this); // assigning the object
+          $(window).scroll(function() {
 
-        $(window).scroll(function() {
+              // Scroll the background at var speed
+              // the yPos is a negative value because we're scrolling it UP!
+              var yPos = -($window.scrollTop() / $bgobj.data('speed'));
 
-            // Scroll the background at var speed
-            // the yPos is a negative value because we're scrolling it UP!
-            var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+              // Put together our final background position
+              var coords = '50% '+ yPos + 'px';
 
-            // Put together our final background position
-            var coords = '50% '+ yPos + 'px';
+              // Move the background
+              $bgobj.css({ backgroundPosition: coords });
 
-            // Move the background
-            $bgobj.css({ backgroundPosition: coords });
+          }); // end window scroll
+      });
 
-        }); // end window scroll
-    });
-
-});
+  });
 
 
+  //Hide and Unhide Sidebar Widget
   $(document).ready(function ($) {
 
     $("#sidebar-slider").on('click', function () {
@@ -52,4 +54,15 @@ $(function() {
     });
   });
 
-}(jQuery));
+
+  //Change out featured images
+
+  var heroImage = document.getElementById('posts-hero-section');
+
+  if ( heroImage.hasAttribute('data-image') ) {
+    var heroURL = heroImage.getAttribute('data-image');
+    $("#posts-hero-section").backstretch(heroURL);
+  }
+
+
+}(jQuery)); //end No Conflict

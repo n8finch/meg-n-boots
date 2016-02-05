@@ -59,15 +59,4 @@
 		</div><!-- modal-dialog -->
 	</div><!-- modal -->
 
-	<!-- Sidebar Modal
-	=======================================-->
-
-	<div class="modal fade" id="modal-sidebar">
-		<div id="sidebar-float-right" class="modal-dialog">
-			<div id="primary-sidebar-widget" class="modal-content">
-				<?php get_sidebar(); ?>
-			</div><!-- modal-content -->
-		</div><!-- modal-dialog -->
-	</div><!-- modal -->
-
 <?php

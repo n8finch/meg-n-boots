@@ -7,17 +7,19 @@
  * @package Meg-n-Boots
  */
 
-//Get the Featured Image
-if ( has_post_thumbnail() ) {
-	the_post_thumbnail();
-}
 ?>
 
-
-
-
 <!-- Hero for Other Pages that aren't home -->
-	<section id="posts-hero-section"  class="hero-page-toppers" data-type="background" data-speed="5">
+
+<!--Get the Featured Image-->
+<?php
+	if ( has_post_thumbnail() ) { ?>
+	<section id="posts-hero-section"  class="hero-page-toppers" data-image="<?php the_post_thumbnail_url(); ?>" data-type="background" data-speed="5">
+	<?php }	else { ?>
+		<section id="posts-hero-section"  class="hero-page-toppers" data-image="<?php echo get_template_directory_uri();?>/img/hipster-stuff.jpg" data-type="background" data-speed="5">
+	<?php
+	} //end if/else
+	?>
 		<article>
 			<div class="container clearfix text-center">
 				<h2 class="hero-section-title">
