@@ -941,6 +941,7 @@ h1.site-title > a {
  * Hero Section Home Page
  -------------------------------------------*/
 #hero-section {
+    height: 500px;
     min-height: 500px;
     position: relative;
     display: table;
