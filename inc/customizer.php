@@ -20,47 +20,51 @@ function meg_n_boots_customize_register( $wp_customize ) {
 	 */
 
 	//Customize Title Section
-	$wp_customize->get_section( 'title_tagline' )->title = __( 'Site Title, Tagline, & Icon', 'meg_n_boots' );
+	$wp_customize->get_section( 'title_tagline' )->title = __( 'Site Title, Tagline, & Icon', 'meg-n-boots' );
 
 	//Hero Image and Title Section
-	$wp_customize->add_section( 'meg_n_boots_hero_title' , array(
-		'title'      => __( 'Hero Image and Title', 'meg_n_boots' ),
-		'priority'   => 61,
+	$wp_customize->add_section( 'meg_n_boots_hero_title', array(
+		'title'    => __( 'Hero Image and Title', 'meg-n-boots' ),
+		'priority' => 61,
 	) );
 
 	$wp_customize->add_setting( 'meg_n_boots_hero_title', array(
-		'default' => 'A nice, bold title!'
+		'default'           => 'Masonry and Bootstrap!',
+		'sanitize_callback' => '__return_false'
 	) );
 
 	$wp_customize->add_control( 'meg_n_boots_hero_title', array(
-		'label'     => __( 'Hero Title', 'meg_n_boots' ),
-		'description' => __('This is the text you want overlayed on your front page Hero Image.'),
-		'section'   => 'meg_n_boots_hero_title',
-		'type'      => 'text',
-		'priority'  => 1
+		'label'       => __( 'Hero Title', 'meg-n-boots' ),
+		'description' => __( 'This is the text you want overlayed on your front page Hero Image.', 'meg-n-boots' ),
+		'section'     => 'meg_n_boots_hero_title',
+		'type'        => 'text',
+		'priority'    => 1
 	) );
 
 	$wp_customize->add_setting( 'meg_n_boots_hero_subtitle', array(
-		'default' => 'And a smalled, supporting subtitle to go with it.'
+		'default'           => 'Make title, hero image, color and other changes in the customizer!',
+		'sanitize_callback' => '__return_false'
 	) );
 
 	$wp_customize->add_control( 'meg_n_boots_hero_subtitle', array(
-		'label'     => __( 'Hero Subtitle', 'meg_n_boots' ),
-		'description' => __('This is the subtitle text you want overlayed on your front page Hero Image.'),
-		'section'   => 'meg_n_boots_hero_title',
-		'type'      => 'text',
-		'priority'  => 2
+		'label'       => __( 'Hero Subtitle', 'meg-n-boots' ),
+		'description' => __( 'This is the subtitle text you want overlayed on your front page Hero Image.', 'meg-n-boots' ),
+		'section'     => 'meg_n_boots_hero_title',
+		'type'        => 'text',
+		'priority'    => 2
 	) );
 
 	$wp_customize->add_setting( 'meg_n_boots_hero_image', array(
-		'default' => '../img/boots-mtn.jpg'
+		'default'           => get_template_directory_uri() . '/img/boots-mtn.jpg',
+		'sanitize_callback' => '__return_false'
 	) );
+
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'meg_n_boots_hero_image', array(
-		'label'		=> __( 'Hero Image', 'meg_n_boots' ),
-		'description' => __('This is the hero image you want displayed, should be at the dimensions 2000 x 745 pixels, or proportionally larger. best results are with images 2000px or wider.'),
-		'section'	=> 'meg_n_boots_hero_title',
-		'settings'	=> 'meg_n_boots_hero_image',
-		'priority'	=> 20
+		'label'       => __( 'Hero Image', 'meg-n-boots' ),
+		'description' => __( 'This is the hero image you want displayed, should be at the dimensions 2000 x 745 pixels, or proportionally larger. best results are with images 2000px or wider.', 'meg-n-boots' ),
+		'section'     => 'meg_n_boots_hero_title',
+		'settings'    => 'meg_n_boots_hero_image',
+		'priority'    => 20
 	) ) );
 
 	//End Hero Image and Title Section
@@ -68,77 +72,83 @@ function meg_n_boots_customize_register( $wp_customize ) {
 	//	Add Color Options for Theme
 	//	remove default color areas
 
-	$wp_customize->remove_control( 'header_textcolor');
-	$wp_customize->remove_control( 'background_color');
+	$wp_customize->remove_control( 'header_textcolor' );
+	$wp_customize->remove_control( 'background_color' );
 
 	$wp_customize->add_setting( 'site_primary_color', array(
-		'default' => '#d43f3a'
+		'default'           => '#d43f3a',
+		'sanitize_callback' => '__return_false'
 	) );
 
 	// add color picker control
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'site_primary_color', array(
-		'label' => 'Site Primary Color',
-		'section' => 'colors',
+		'label'    => 'Site Primary Color',
+		'section'  => 'colors',
 		'settings' => 'site_primary_color',
 		'priority' => 1
 	) ) );
 
 	$wp_customize->add_setting( 'title_text_color', array(
-		'default' => '#ffffff'
+		'default'           => '#ffffff',
+		'sanitize_callback' => '__return_false'
 	) );
 
 	// add color picker control
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'title_text_color', array(
-		'label' => 'Title Text Color',
-		'section' => 'colors',
+		'label'    => 'Title Text Color',
+		'section'  => 'colors',
 		'settings' => 'title_text_color',
 		'priority' => 2
 	) ) );
 
 	$wp_customize->add_setting( 'body_color', array(
-		'default' => '#ffffff'
+		'default'           => '#ffffff',
+		'sanitize_callback' => '__return_false'
 	) );
 
 	// add color picker control
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'body_color', array(
-		'label' => 'Body Color',
-		'section' => 'colors',
+		'label'    => 'Body Color',
+		'section'  => 'colors',
 		'settings' => 'body_color',
 		'priority' => 11
 	) ) );
 
 	$wp_customize->add_setting( 'text_color', array(
-		'default' => '#000000'
+		'default'           => '#000000',
+		'sanitize_callback' => '__return_false'
 	) );
 
 	// add color picker control
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'text_color', array(
-		'label' => 'Text Color',
-		'section' => 'colors',
+		'label'    => 'Text Color',
+		'section'  => 'colors',
 		'settings' => 'text_color',
 		'priority' => 12
 	) ) );
 
 	$wp_customize->add_setting( 'link_color', array(
-		'default' => '#337ab7'
+		'default'           => '#337ab7',
+		'sanitize_callback' => '__return_false'
 	) );
 
 	// add color picker control
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
-		'label' => 'Link Color',
-		'section' => 'colors',
+		'label'    => 'Link Color',
+		'section'  => 'colors',
 		'settings' => 'link_color',
 		'priority' => 15
 	) ) );
 
 	$wp_customize->add_setting( 'background_theme_color', array(
-		'default' => '#e9e9e9'
+		'default'           => '#e9e9e9',
+		'sanitize_callback' => '__return_false'
 	) );
 
 	// add color picker control
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_theme_color', array(
-		'label' => 'Background Theme Color',
-		'section' => 'colors',
+		'label'    => 'Background Theme Color',
+		'section'  => 'colors',
 		'settings' => 'background_theme_color',
 		'priority' => 20
 	) ) );
@@ -146,6 +156,7 @@ function meg_n_boots_customize_register( $wp_customize ) {
 	//	Add Color Options for Theme
 
 }
+
 add_action( 'customize_register', 'meg_n_boots_customize_register' );
 
 
@@ -156,88 +167,88 @@ add_action( 'customize_register', 'meg_n_boots_customize_register' );
 function meg_n_boots_customizer_head_styles() {
 
 	global $meg_n_boots_hero_title, $meg_n_boots_hero_subtitle, $meg_n_boots_hero_image;
-	$meg_n_boots_hero_title = get_theme_mod( 'meg_n_boots_hero_title' );
+	$meg_n_boots_hero_title    = get_theme_mod( 'meg_n_boots_hero_title' );
 	$meg_n_boots_hero_subtitle = get_theme_mod( 'meg_n_boots_hero_subtitle' );
 
-	$meg_n_boots_hero_image = get_theme_mod( 'meg_n_boots_hero_image');
+	$meg_n_boots_hero_image = get_theme_mod( 'meg_n_boots_hero_image' );
 
-	$site_primary_color = get_theme_mod( 'site_primary_color' );
-	$title_text_color = get_theme_mod( 'title_text_color' );
-	$body_color = get_theme_mod( 'body_color' );
-	$text_color = get_theme_mod( 'text_color' );
-	$link_color = get_theme_mod( 'link_color' );
+	$site_primary_color     = get_theme_mod( 'site_primary_color' );
+	$title_text_color       = get_theme_mod( 'title_text_color' );
+	$body_color             = get_theme_mod( 'body_color' );
+	$text_color             = get_theme_mod( 'text_color' );
+	$link_color             = get_theme_mod( 'link_color' );
 	$background_theme_color = get_theme_mod( 'background_theme_color' );
 
 	?>
-		<style type="text/css">
+	<style type="text/css">
 
-			#hero-section {
-				background: url('<?php echo $meg_n_boots_hero_image ?>') 50% 0 repeat fixed;
-			}
+		#hero-section {
+			background: url('<?php echo $meg_n_boots_hero_image ?>') 50% 0 repeat fixed;
+		}
 
-			/*Site Primary Color*/
-			button:hover,
-			input[type="submit"]:hover,
-			.nav-previous > a:hover,
-			.nav-next > a:hover {
-				color: <?php echo $site_primary_color; ?>;
-			}
+		/*Site Primary Color*/
+		button:hover,
+		input[type="submit"]:hover,
+		.nav-previous > a:hover,
+		.nav-next > a:hover {
+			color: <?php echo $site_primary_color; ?>;
+		}
 
-			input[type="submit"],
-			.nav-previous > a,
-			.nav-next > a {
-				background-color: <?php echo $site_primary_color; ?>;
-			}
+		input[type="submit"],
+		.nav-previous > a,
+		.nav-next > a {
+			background-color: <?php echo $site_primary_color; ?>;
+		}
 
-			.navbar {
-				background: <?php echo $site_primary_color; ?>;
-			}
+		.navbar {
+			background: <?php echo $site_primary_color; ?>;
+		}
 
-			/*Title Text Color*/
-			h1.site-title > a,
-			.glyphicon {
-				color: <?php echo $title_text_color; ?>;
-			}
+		/*Title Text Color*/
+		h1.site-title > a,
+		.glyphicon {
+			color: <?php echo $title_text_color; ?>;
+		}
 
-			/*Text Color*/
-			body,
-			p > .glyphicon{
-				color: <?php echo $text_color; ?>;
-			}
+		/*Text Color*/
+		body,
+		p > .glyphicon {
+			color: <?php echo $text_color; ?>;
+		}
 
-			/*Body Color*/
-			.grid-item-content,
-			.site-content,
-			#content {
-				background: <?php echo $body_color; ?>;
-			}
+		/*Body Color*/
+		.grid-item-content,
+		.site-content,
+		#content {
+			background: <?php echo $body_color; ?>;
+		}
 
-			/*Background Theme Color*/
+		/*Background Theme Color*/
 
-			body {
-				background: <?php echo $background_theme_color; ?>;
-			}
+		body {
+			background: <?php echo $background_theme_color; ?>;
+		}
 
-			button:hover,
-			.nav-next>a:hover,
-			.nav-previous>a:hover {
-				background-color: <?php echo $background_theme_color; ?>;
-			}
+		button:hover,
+		.nav-next > a:hover,
+		.nav-previous > a:hover {
+			background-color: <?php echo $background_theme_color; ?>;
+		}
 
-			input[type="submit"] {
-				color: <?php echo $background_theme_color; ?>;
-			}
+		input[type="submit"] {
+			color: <?php echo $background_theme_color; ?>;
+		}
 
-			/*Link Color*/
-			a {
-				color: <?php echo $link_color; ?>;
-			}
+		/*Link Color*/
+		a {
+			color: <?php echo $link_color; ?>;
+		}
 
-		</style>
+	</style>
 	<?php
 }
-add_action( 'wp_head', 'meg_n_boots_customizer_head_styles' );
 
+add_action( 'wp_head', 'meg_n_boots_customizer_head_styles' );
 
 
 /**
@@ -246,6 +257,7 @@ add_action( 'wp_head', 'meg_n_boots_customizer_head_styles' );
 function meg_n_boots_customize_preview_js() {
 	wp_enqueue_script( 'meg_n_boots_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
+
 add_action( 'customize_preview_init', 'meg_n_boots_customize_preview_js' );
 
 

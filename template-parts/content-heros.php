@@ -13,13 +13,16 @@
 
 <!--Get the Featured Image-->
 <?php
-	if ( has_post_thumbnail() ) { ?>
-	<section id="posts-hero-section"  class="hero-page-toppers" data-image="<?php the_post_thumbnail_url(); ?>" data-type="background" data-speed="5">
-	<?php }	else { ?>
-		<section id="posts-hero-section"  class="hero-page-toppers" data-image="<?php echo get_template_directory_uri();?>/img/hipster-stuff.jpg" data-type="background" data-speed="5">
-	<?php
-	} //end if/else
-	?>
+if ( has_post_thumbnail() ) { ?>
+<section id="posts-hero-section" class="hero-page-toppers" data-image="<?php the_post_thumbnail_url(); ?>"
+         data-type="background" data-speed="5">
+	<?php }    else { ?>
+	<section id="posts-hero-section" class="hero-page-toppers"
+	         data-image="<?php echo get_template_directory_uri(); ?>/img/hipster-stuff.jpg" data-type="background"
+	         data-speed="5">
+		<?php
+		} //end if/else
+		?>
 		<article>
 			<div class="container clearfix text-center">
 				<h2 class="hero-section-title">
@@ -38,5 +41,5 @@
 	</section>
 
 
-<!--Headers for every page except home page-->
+	<!--Headers for every page except home page-->
 	<div id="content" class="site-content">

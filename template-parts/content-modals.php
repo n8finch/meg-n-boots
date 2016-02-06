@@ -17,18 +17,24 @@
 			<div class="modal-content">
 
 				<div class="col-sm-12 col-md-12 search-navbar"> <!--  Search Bar -->
-					<form class="navbar-form" role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
+					<form class="navbar-form" role="search" method="get" id="searchform"
+					      action="<?php echo esc_url( home_url() ); ?>">
 						<div class="input-group">
 							<input type="text" id="searchbox" class="form-control" placeholder="Search" name="s" id="s">
+
 							<div class="input-group-btn">
-								<button class="btn btn-default"  id="searchsubmit"  type="submit"><i class="glyphicon glyphicon-search"></i></button>
+								<button class="btn btn-default" id="searchsubmit" type="submit"><i
+										class="glyphicon glyphicon-search"></i></button>
 							</div>
 						</div>
 					</form>
-				</div> <!-- end Search Bar -->
+				</div>
+				<!-- end Search Bar -->
 
-			</div><!-- modal-content -->
-		</div><!-- modal-dialog -->
+			</div>
+			<!-- modal-content -->
+		</div>
+		<!-- modal-dialog -->
 	</div><!-- modal -->
 
 	<!-- Menu Modal
@@ -42,21 +48,25 @@
 				<div class="col-sm-12 col-md-12 search-navbar text-center"> <!--  Search Bar -->
 					<?php
 					wp_nav_menu( array(
-							'menu'              => 'primary',
-							'theme_location'    => 'primary',
-							'depth'             => 2,
-							'container'         => 'div',
-							'container_class'   => 'collapse navbar-collapse',
-							'container_id'      => 'bs-example-navbar-collapse-1',
-							'menu_class'        => 'nav nav-stacked',
-							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-							'walker'            => new wp_bootstrap_navwalker())
+							'menu'            => 'primary',
+							'theme_location'  => 'primary',
+							'depth'           => 2,
+							'container'       => 'div',
+							'container_class' => 'collapse navbar-collapse',
+							'container_id'    => 'bs-example-navbar-collapse-1',
+							'menu_class'      => 'nav nav-stacked',
+							'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+							'walker'          => new wp_bootstrap_navwalker()
+						)
 					);
 					?>
-				</div> <!-- end Search Bar -->
+				</div>
+				<!-- end Search Bar -->
 
-			</div><!-- modal-content -->
-		</div><!-- modal-dialog -->
+			</div>
+			<!-- modal-content -->
+		</div>
+		<!-- modal-dialog -->
 	</div><!-- modal -->
 
 <?php

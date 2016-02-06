@@ -15,9 +15,12 @@
 
   var heroImage = document.getElementById('posts-hero-section');
 
-  if ( heroImage.hasAttribute('data-image') ) {
-    var heroURL = heroImage.getAttribute('data-image');
-    $("#posts-hero-section").backstretch(heroURL);
+  if ( heroImage !== null ) {
+
+    if (heroImage.hasAttribute('data-image')) {
+      var heroURL = heroImage.getAttribute('data-image');
+      $("#posts-hero-section").backstretch(heroURL);
+    }
   }
 
 
@@ -55,7 +58,6 @@
   $(document).ready(function ($) {
 
     $("#sidebar-slider").on('click', function () {
-      console.log("clicked1");
       if ($("#primary-sidebar-widget").hasClass('hide') === true) {
         $("#primary-sidebar-widget").removeClass('hide');
       } else {

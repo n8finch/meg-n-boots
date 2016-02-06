@@ -8,79 +8,79 @@
  */
 
 if ( ! function_exists( 'meg_n_boots_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function meg_n_boots_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Meg-n-Boots, use a find and replace
-	 * to change 'meg-n-boots' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( 'meg-n-boots', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function meg_n_boots_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on Meg-n-Boots, use a find and replace
+		 * to change 'meg-n-boots' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'meg-n-boots', get_template_directory() . '/languages' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'meg-n-boots' ),
-	) );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'meg_n_boots_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+			'primary' => esc_html__( 'Primary', 'meg-n-boots' ),
+		) );
+
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
+
+		/*
+		 * Enable support for Post Formats.
+		 * See https://developer.wordpress.org/themes/functionality/post-formats/
+		 */
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+		) );
+
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'meg_n_boots_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
 
 
-	// Set up the WordPress core custom header feature.
-	add_theme_support( 'custom-header' );
-}
+		// Set up the WordPress core custom header feature.
+		add_theme_support( 'custom-header' );
+	}
 endif;
 add_action( 'after_setup_theme', 'meg_n_boots_setup' );
 
@@ -94,7 +94,22 @@ add_action( 'after_setup_theme', 'meg_n_boots_setup' );
 function meg_n_boots_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'meg_n_boots_content_width', 640 );
 }
+
 add_action( 'after_setup_theme', 'meg_n_boots_content_width', 0 );
+
+
+add_action( 'init', 'meg_n_boots_add_editor_styles' );
+/**
+ * Apply theme's stylesheet to the visual editor.
+ *
+ * @uses add_editor_style() Links a stylesheet to visual editor
+ * @uses get_stylesheet_uri() Returns URI of theme stylesheet
+ */
+function meg_n_boots_add_editor_styles() {
+
+	add_editor_style( get_stylesheet_uri() );
+
+}
 
 /**
  * Register widget area.
@@ -122,6 +137,7 @@ function meg_n_boots_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
+
 add_action( 'widgets_init', 'meg_n_boots_widgets_init' );
 
 /**
@@ -130,11 +146,11 @@ add_action( 'widgets_init', 'meg_n_boots_widgets_init' );
 function meg_n_boots_scripts() {
 	wp_enqueue_style( 'meg-n-boots-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() .'/css/bootstrap.min.css');
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 
-	wp_enqueue_style( 'bootstrap-theme-min', get_template_directory_uri() . '/css/bootstrap-theme.min.css');
+	wp_enqueue_style( 'bootstrap-theme-min', get_template_directory_uri() . '/css/bootstrap-theme.min.css' );
 
-	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css');
+	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css' );
 
 	wp_enqueue_script( 'meg-n-boots-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -148,7 +164,7 @@ function meg_n_boots_scripts() {
 	 * Added Scripts and styles for the custom theme
 	 */
 
-	wp_enqueue_script( 'jquery');
+	wp_enqueue_script( 'jquery' );
 
 	wp_enqueue_script( 'backstretch', get_template_directory_uri() . '/js/backstretch.js', array(), '2.0.4', true );
 
@@ -162,6 +178,7 @@ function meg_n_boots_scripts() {
 
 
 }
+
 add_action( 'wp_enqueue_scripts', 'meg_n_boots_scripts' );
 
 /**

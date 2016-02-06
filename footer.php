@@ -18,9 +18,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'meg-n-boots' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'meg-n-boots' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'meg-n-boots' ), 'Meg-n-Boots', '<a href="http://www.n8finch.com" rel="designer">Nate Finch</a>' ); ?>
+			Proudly powered by <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'meg-n-boots' ) ); ?>"><?php printf( esc_html__( '%s', 'meg-n-boots' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>Meg-n-Boots theme developed by
+			<a href="<?php echo esc_url( __( 'http://n8finch.com/', 'meg-n-boots' ) ); ?>"><?php printf( esc_html__( '%s', 'meg-n-boots' ), 'Nate Finch' ); ?></a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	</div><!-- #container -->

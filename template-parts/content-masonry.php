@@ -27,7 +27,7 @@
 					<span class='author-image'><?php echo get_avatar( get_the_author_meta( 'ID' ) );?></span><span> <?php the_author_meta( 'display_name' ); ?></span>
 				</div>
 				<div class="main-page-the-content">
-					<?php the_content(__('Read more...')); ?>
+					<?php the_content(__('Read more...', 'meg-n-boots')); ?>
 				</div>
 
 			</div>
