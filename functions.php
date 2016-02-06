@@ -144,6 +144,7 @@ add_action( 'widgets_init', 'meg_n_boots_widgets_init' );
  * Enqueue scripts and styles.
  */
 function meg_n_boots_scripts() {
+
 	wp_enqueue_style( 'meg-n-boots-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
