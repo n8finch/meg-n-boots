@@ -18,3 +18,9 @@ wp-content/plugins/hello.php
 
 .idea
 
+node_modules
+.npm-debug.log
+tmp
+
+.sass-cache
+*.css.map
