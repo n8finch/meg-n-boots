@@ -1,0 +1,29 @@
+{
+  "name": "meg-n-boots",
+  "version": "1.0.0",
+  "description": "package manager for meg-n-boots theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n8finch/meg-n-boots.git"
+  },
+  "keywords": [
+    "wordpress",
+    "bootstrap",
+    "masonry",
+    "backstretch"
+  ],
+  "author": "Nate Finch",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/n8finch/meg-n-boots/issues"
+  },
+  "homepage": "https://github.com/n8finch/meg-n-boots#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.12.0"
+  }
+}
