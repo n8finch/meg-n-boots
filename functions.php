@@ -157,13 +157,15 @@ function meg_n_boots_scripts() {
 
 	wp_enqueue_script( 'jquery' );
 
-	wp_enqueue_script( 'masonry-js', get_template_directory_uri() . '/js/masonry.js', array(), '4.0.0', true );
+	wp_enqueue_script( 'wp-scripts-meg-n-boots', get_template_directory_uri() . '/js/meg-n-boots.js', array(), '1.0.0', true );
 
-//	wp_enqueue_script( 'meg-n-boots-min', get_template_directory_uri() . '/js/meg-n-boots.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'masonry-js', get_template_directory_uri() . '/bower_components/masonry/dist/masonry.pkgd.min.js', array(), '4.0.0', true );
 
+	wp_enqueue_script( 'backstretch-js', get_template_directory_uri() . '/bower_components/jquery-backstretch/jquery.backstretch.min.js', array(), '1.0.0', true );
+
+	wp_enqueue_script( 'bootstrap-min-js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array(), '1.0.0', true );
 
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '1.0', true );
-
 
 }
 

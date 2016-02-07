@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       options: {
       },
       javascript: {
-        src: ['bower_components/jquery-backstretch/jquery.backstretch.min.js','bower_components/bootstrap/dist/js/bootstrap.min.js', 'js/customizer.js', 'js/navigation.js', 'js/npm.js', 'js/skip-link-focus-fix.js', 'bower_components/masonry/masonry.js', 'js/custom.js' ],
+        src: [ 'js/customizer.js', 'js/navigation.js', 'js/npm.js', 'js/skip-link-focus-fix.js', 'js/custom.js' ],
         dest: 'js/meg-n-boots.js'
       },
       css: {
