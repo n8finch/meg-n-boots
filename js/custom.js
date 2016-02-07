@@ -1,13 +1,13 @@
 // external js: masonry.pkgd.js
 //No Conflict
-(function($) {
+(function ($) {
 
   //Add Masonry to index.php
 
   $('.grid').masonry({
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-sizer',
-      percentPosition: true
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
   });
 
 
@@ -15,7 +15,7 @@
 
   var heroImage = document.getElementById('posts-hero-section');
 
-  if ( heroImage !== null ) {
+  if (heroImage !== null) {
 
     if (heroImage.hasAttribute('data-image')) {
       var heroURL = heroImage.getAttribute('data-image');
@@ -25,31 +25,31 @@
 
 
   //Hero Image Parallax
-  $(function() {
+  $(function () {
 
-      // Cache the Window object
-      var $window = $(window);
+    // Cache the Window object
+    var $window = $(window);
 
-      // Parallax Backgrounds
-      // Tutorial: http://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641
+    // Parallax Backgrounds
+    // Tutorial: http://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641
 
-      $('section[data-type="background"]').each(function(){
-          var $bgobj = $(this); // assigning the object
+    $('section[data-type="background"]').each(function () {
+      var $bgobj = $(this); // assigning the object
 
-          $(window).scroll(function() {
+      $(window).scroll(function () {
 
-              // Scroll the background at var speed
-              // the yPos is a negative value because we're scrolling it UP!
-              var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+        // Scroll the background at var speed
+        // the yPos is a negative value because we're scrolling it UP!
+        var yPos = -($window.scrollTop() / $bgobj.data('speed'));
 
-              // Put together our final background position
-              var coords = '50% '+ yPos + 'px';
+        // Put together our final background position
+        var coords = '50% ' + yPos + 'px';
 
-              // Move the background
-              $bgobj.css({ backgroundPosition: coords });
+        // Move the background
+        $bgobj.css({backgroundPosition: coords});
 
-          }); // end window scroll
-      });
+      }); // end window scroll
+    });
 
   });
 
@@ -65,8 +65,5 @@
       }
     });
   });
-
-
-
 
 }(jQuery)); //end No Conflict

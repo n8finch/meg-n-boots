@@ -21,24 +21,46 @@ module.exports = function(grunt) {
       },
       javascript: {
         src: ['js/*.js'],
-        dest: 'built.js'
+        dest: 'meg-n-boots.js'
       },
       css: {
-        src: ['css/main-style.css', 'css/bootstrap.min.css', 'css/bootstrap-theme.min.css', 'css/bootstrap-theme.min.css', 'css/media-queries.css', 'css/custom.css'],
-        dest: 'style.css'
+        src: ['css/main-style.css', 'css/bootstrap.min.css', 'css/bootstrap-theme.min.css', 'css/bootstrap-theme.min.css', 'css/custom.css'],
+        dest: 'style-human.css'
+      }
+    },
+
+    uglify: {
+      javascript: {
+        files: {
+          'meg-n-boots.min.js': ['meg-n-boots.js']
+        }
+      }
+    },
+
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: {
+          'style.css': ['style-human.css']
+        }
       }
     },
 
     watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['jshint']
+      files: ['css/*.css', 'js/*.js'],
+      tasks: ['jshint', 'concat']
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['jshint', 'concat',]);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'watch']);
 
 };
