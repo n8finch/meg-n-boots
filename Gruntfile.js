@@ -24,8 +24,8 @@ module.exports = function(grunt) {
         dest: 'meg-n-boots.js'
       },
       css: {
-        src: ['css/main-style.css', 'css/bootstrap.min.css', 'css/bootstrap-theme.min.css', 'css/bootstrap-theme.min.css', 'css/custom.css'],
-        dest: 'style-human.css'
+        src: ['css/main-style.css', 'css/bootstrap.min.css', 'css/custom.css'],
+        dest: 'style.css'
       }
     },
 
@@ -61,6 +61,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'watch']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'watch']);
 
 };
