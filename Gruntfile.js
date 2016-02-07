@@ -12,19 +12,26 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'bower_components/bootstrap/dist/fonts/',
+        src: '**',
+        dest: 'bsfonts/',
+        flatten: true,
+        filter: 'isFile'
+      }
+    },
 
     concat: {
       options: {
-        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %> */',
-        separator: '/*-----------------------------------------*/',
       },
       javascript: {
-        src: ['js/*.js'],
-        dest: 'meg-n-boots.js'
+        src: ['bower_components/jquery-backstretch/jquery.backstretch.min.js','bower_components/bootstrap/dist/js/bootstrap.min.js', 'js/customizer.js', 'js/navigation.js', 'js/npm.js', 'js/skip-link-focus-fix.js', 'bower_components/masonry/masonry.js', 'js/custom.js' ],
+        dest: 'js/meg-n-boots.js'
       },
       css: {
-        src: ['css/main-style.css', 'css/bootstrap.min.css', 'css/custom.css'],
+        src: ['css/main-style.css', 'bower_components/bootstrap/dist/css/bootstrap.min.css', 'css/custom.css'],
         dest: 'style.css'
       }
     },
@@ -47,7 +54,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['jshint', 'copy', 'concat', 'uglify', 'watch']);
 
 };
