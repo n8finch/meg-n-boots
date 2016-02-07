@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
-		<div class="grid-item col-xs-6 col-sm-6 col-md-4">
+		<div class="grid-item col-xs-12 col-sm-6 col-md-4">
 			<div class="grid-item-content">
 				<div class=''>
 					<a href="<?php echo the_permalink(); ?>">

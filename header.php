@@ -37,8 +37,8 @@
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
-
-				<div class="site-branding text-left col-xs-4">
+				<row>
+				<div class="site-branding text-left col-xs-6">
 					<?php if ( isset (get_theme_mod( 'header_image_data' )->url )) : ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<img id="header-logo" src="<?php echo get_theme_mod( 'header_image_data' )->url ?>" alt="<?php echo get_bloginfo('name'); ?>">
@@ -61,7 +61,7 @@
 					endif; ?>
 				</div><!-- .site-branding -->
 
-				<div id="navbar-button-group" class="text-right">
+				<div id="navbar-button-group" class="text-right col-xs-6">
 					<button type="button" class="navbar-button"  data-toggle="modal" data-target="#modal-search">
 						<span class="sr-only">Toggle navigation</span>
 						<span id="" class="glyphicon glyphicon-search"></span>
@@ -75,6 +75,7 @@
 						<span class="glyphicon glyphicon-option-horizontal"></span>
 					</button>
 				</div>
+				</row>
 			</div><!--end container-->
 		</nav>
 	</header><!-- #masthead -->
