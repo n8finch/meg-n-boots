@@ -15,9 +15,9 @@ module.exports = function(grunt) {
 
     concat: {
       options: {
-        //banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-        //'<%= grunt.template.today("yyyy-mm-dd") %> */',
-        //separator: '/*-----------------------------------------*/',
+        banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+        '<%= grunt.template.today("yyyy-mm-dd") %> */',
+        separator: '/*-----------------------------------------*/',
       },
       javascript: {
         src: ['js/*.js'],
@@ -37,18 +37,6 @@ module.exports = function(grunt) {
       }
     },
 
-    cssmin: {
-      options: {
-        shorthandCompacting: false,
-        roundingPrecision: -1
-      },
-      target: {
-        files: {
-          'style.css': ['style-human.css']
-        }
-      }
-    },
-
     watch: {
       files: ['css/*.css', 'js/*.js'],
       tasks: ['jshint', 'concat']
@@ -59,7 +47,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'watch']);
 
