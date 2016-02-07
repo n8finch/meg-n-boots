@@ -1,0 +1,25 @@
+{
+  "name": "meg-n-boots",
+  "description": "package manager for meg-n-boots theme",
+  "main": "index.js",
+  "authors": [
+    "Nate Finch"
+  ],
+  "license": "GPL-2.0",
+  "keywords": [
+    "wordpress",
+    "bootstrap",
+    "masonry",
+    "backstretch"
+  ],
+  "homepage": "https://github.com/n8finch/meg-n-boots",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
