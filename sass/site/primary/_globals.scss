@@ -1,0 +1,64 @@
+/*
+ * Global
+ -------------------------------------------*/
+body {
+  background: #E9E9E9
+}
+
+.container {
+  padding: 0px;
+}
+
+button {
+  box-shadow: none;
+  border: none;
+  text-shadow: none;
+}
+
+button:hover {
+  box-shadow: none;
+  color: #D43F3A;
+  background-color: #E9E9E9;
+}
+
+input[type="submit"] {
+  box-shadow: none;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 1;
+  padding: .6em 1em .4em;
+  background-color: #D43F3A;
+  color: #E9E9E9;
+}
+
+input[type="submit"]:hover {
+  box-shadow: none;
+  color: #D43F3A;
+  background-color: #ffffff;
+}
+
+p {
+  font-size: 16px;
+}
+
+ul {
+  font-size: 16px;
+}
+
+a {
+  color: #337ab7;
+}
+
+a:visited {
+  color: #337ab7;
+}
+
+/**
+/* Layout*/
+/*-------------------------------------------*!/*/
+
+.content-area {
+  padding: 0 30px;
+}

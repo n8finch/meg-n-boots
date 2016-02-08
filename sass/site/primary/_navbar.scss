@@ -1,0 +1,87 @@
+/*
+ * Navbar
+ -------------------------------------------*/
+
+h1.site-title > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.navbar {
+  padding: 0px 25px 10px 10px;
+  background: #d43f3a;
+  color: white;
+}
+
+.navbar-default {
+  border: none;
+  border-color: none;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: white;
+  background-color: transparent;
+}
+
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 0px !important;
+}
+
+#header-logo {
+  height: 60px;
+  min-width: 190px;
+  margin-top: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  border-radius: 4px;
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+  border-radius: 4px;
+}
+
+.nav > li > a:visited {
+  color: #ffffff;
+}
+
+.nav > li > a:hover {
+  color: #337ab7;
+}
+
+.dropdown-menu > li > a {
+  color: #337ab7;
+}
+
+#navbar-button-group {
+  margin: 25px 0px 0px;
+}
+
+.navbar-button {
+  background-color: transparent;
+}
+
+.navbar-collapse > ul > li > a {
+  color: white;
+  font-size: 24px;
+}

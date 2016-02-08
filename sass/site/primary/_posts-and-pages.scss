@@ -1,0 +1,122 @@
+.sticky {
+  display: block;
+}
+
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*
+ * Posts
+ -------------------------------------------*/
+
+#posts-hero-section {
+  min-height: 300px;
+  height: 300px;
+  position: relative;
+  display: table;
+  width: 100%;
+  padding: 40px 0;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+#posts-hero-section .hero-text {
+  margin-top: 30px;
+}
+
+#posts-hero-section article {
+  width: 100%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header {
+  text-align: center;
+}
+
+#content {
+  max-width: 900px;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 20px auto;
+}
+
+.post-body {
+  max-width: 700px;
+  margin: 0px auto;
+  padding: 0 30px;
+}
+
+/*
+ * Search form
+ -------------------------------------------*/
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+#toggle {
+  display: none;
+  z-index: 999999;
+  position: absolute;
+  text-align: center;
+  margin: 0px auto;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+
+}
+
+div.input-group {
+  width: 575px;
+}
+
+input#searchbox.form-control {
+  height: 50px;
+  font-size: 24px;
+}
+
+button#searchsubmit.btn.btn-default {
+  height: 50px;
+  font-size: 18px;
+}
+
+/*Search Results Page*/
+
+.search-page-query {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.page-header {
+  padding-bottom: none;
+  margin: none;
+  border-bottom: none;
+}

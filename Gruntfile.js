@@ -44,9 +44,20 @@ module.exports = function(grunt) {
       }
     },
 
+    sass: {                              // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          style: 'expanded'
+        },
+        files: {                         // Dictionary of files
+          'sass/newstyle.css': 'sass/style.scss',       // 'destination': 'source'
+        }
+      }
+    },
+
     watch: {
-      files: ['css/*.css', 'js/*.js'],
-      tasks: ['jshint', 'concat']
+      files: ['css/*.css', 'js/*.js', 'sass/**/*.scss'],
+      tasks: ['jshint', 'concat', 'sass']
     }
   });
 
@@ -55,7 +66,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
-  grunt.registerTask('default', ['jshint', 'copy', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['jshint', 'copy', 'concat', 'uglify', 'sass', 'watch']);
 
 };

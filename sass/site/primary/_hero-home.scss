@@ -1,0 +1,43 @@
+/*
+ * Hero Section Home Page
+ -------------------------------------------*/
+#hero-section {
+  height: 500px;
+  min-height: 500px;
+  position: relative;
+  display: table;
+  width: 100%;
+  padding: 40px 0;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+#hero-section article {
+  width: 100%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#hero-section .hero-text {
+  margin-top: 30px;
+}
+
+.hero-section-title,
+.hero-section-p {
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+}
+
+.hero-section-title {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+#hero-page-toppers {
+  min-height: 250px;
+}
+
+.hero-section-p {
+  font-size: 28px;
+}
