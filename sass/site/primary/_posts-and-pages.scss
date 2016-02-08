@@ -38,7 +38,7 @@
   display: table;
   width: 100%;
   padding: 40px 0;
-  color: white;
+  color: $color__title-text;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
 }
@@ -60,7 +60,7 @@ header {
 
 #content {
   max-width: 900px;
-  background: white;
+  background: $color__background-body;
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 30px;

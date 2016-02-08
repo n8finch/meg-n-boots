@@ -20,7 +20,7 @@
 }
 
 .grid-item-content {
-  background: white;
+  background: $color__background-body;
   border: 1px solid #aaa;
   border-radius: 5px;
 }
@@ -59,16 +59,16 @@
 
 .nav-previous > a,
 .nav-next > a {
-  background-color: #D43F3A;
-  color: white;
+  background-color: $color__site-primary;
+  color: $color__title-text;
   padding: 10px 20px;
   border-radius: 3px;
 }
 
 .nav-previous > a:hover,
 .nav-next > a:hover {
-  background-color: #ffffff;
-  color: #D43F3A;
+  background-color: $color__background-body;
+  color: $color__site-primary;
   padding: 10px 20px;
   border-radius: 3px;
   text-decoration: none;

@@ -2,7 +2,7 @@
  * Global
  -------------------------------------------*/
 body {
-  background: #E9E9E9
+  background: $color__background-site;
 }
 
 .container {
@@ -17,8 +17,8 @@ button {
 
 button:hover {
   box-shadow: none;
-  color: #D43F3A;
-  background-color: #E9E9E9;
+  color: $color__site-primary;
+  background-color: $color__background-site;
 }
 
 input[type="submit"] {
@@ -29,14 +29,14 @@ input[type="submit"] {
   font-size: 14px;
   line-height: 1;
   padding: .6em 1em .4em;
-  background-color: #D43F3A;
-  color: #E9E9E9;
+  background-color: $color__site-primary;
+  color: $color__background-site;
 }
 
 input[type="submit"]:hover {
   box-shadow: none;
-  color: #D43F3A;
-  background-color: #ffffff;
+  color: $color__site-primary;
+  background-color: $color__background-body;
 }
 
 p {
@@ -48,11 +48,11 @@ ul {
 }
 
 a {
-  color: #337ab7;
+  color: $color__link;
 }
 
 a:visited {
-  color: #337ab7;
+  color: $color__link-visited;
 }
 
 /**
