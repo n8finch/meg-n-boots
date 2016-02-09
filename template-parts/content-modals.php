@@ -68,5 +68,3 @@
 		</div>
 		<!-- modal-dialog -->
 	</div><!-- modal -->
-
-<?php
